@@ -1,0 +1,56 @@
+AllCops:
+  TargetRubyVersion: 2.5
+  Exclude:
+    - 'spec/spec_helper.rb'
+    - 'spec/rails_helper.rb'
+    - 'config/**/*'
+    - '**/Gemfile'
+    - '**/Rakefile'
+    - 'vendor/**/*'
+    - 'db/**/*'
+    - 'lib/tasks/**/*'
+    - 'spec/factories/*'
+
+  DisplayCopNames: true
+
+Lint/MissingCopEnableDirective:
+  Enabled: false
+
+Style/FormatStringToken:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Layout/EmptyLinesAroundBlockBody:
+  Enabled: false
+
+Layout/EmptyLinesAroundClassBody:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+
+Style/RaiseArgs:
+  Enabled: false
+
+Layout/TrailingBlankLines:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 20
+
+Metrics/BlockLength:
+  Enabled: false
+
+Layout/SpaceInLambdaLiteral:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
