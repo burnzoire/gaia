@@ -2,8 +2,8 @@ class GaiaSource
   include Cequel::Record
 
   key :solution_id, :text
-  column :source_id, :text
-  column :random_index, :text
+  key :source_id, :text
+  key :random_index, :text
   column :ref_epoch, :text
   column :ra, :text
   column :ra_error, :text
@@ -58,4 +58,5 @@ class GaiaSource
   column :b, :text
   column :ecl_lon, :text
   column :ecl_lat, :text
+  timestamps
 end
