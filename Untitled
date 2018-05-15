@@ -1,0 +1,20 @@
+class Account < ActiveRecord::Base
+  has_many :AccountInteractions
+  has_many :form_interactions, through: :account_interactions, source: :interaction, source_type: 'FormInteraction'
+  has_many :tracker_interactions, through: :account_interactions, source: :interaction, source_type: 'TrackerInteraction'
+end
+
+class FormInteraction < ActiveRecord::Base
+  has_one :interaction, as::interaction
+  has_one :account, through: :account_interactions
+end
+
+class TrackerInteraction < ActiveRecord::Base
+  belongs_to :account
+  belongs_to :interaction, polymorphic: true
+end
+
+class AccountInteraction < ActiveRecord::Base
+  belongs_to :article
+  belongs_to :interaction, polymorphic: true
+end

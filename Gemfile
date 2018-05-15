@@ -5,9 +5,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
-gem 'rails', '~> 5.2.0'
+gem 'rails', '~> 5.1.6'
 gem 'sqlite3'
-gem 'activemodel-serializers-xml'
 gem 'cequel'
 
 gem 'puma', '~> 3.11'
